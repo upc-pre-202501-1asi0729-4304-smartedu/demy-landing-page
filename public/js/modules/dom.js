@@ -36,4 +36,30 @@ export function updateTexts(data) {
     `;
         teamContainer.innerHTML += memberHTML;
     });
+
+    document.getElementById("testimonial-title").textContent = data.testimonialTitle;
+    //testimonial
+    const testimonialElements = [
+        document.getElementById("testimonial-1"),
+        document.getElementById("testimonial-2"),
+        document.getElementById("testimonial-3")
+    ];
+
+    // Actualizamos los testimonios con los datos
+    data.testimonials.forEach((testimonialData, index) => {
+        const testimonialElement = testimonialElements[index];
+        testimonialElement.querySelector(".testimonial-text").textContent = testimonialData.text;
+        testimonialElement.querySelector(".testimonial-name").textContent = testimonialData.name;
+        testimonialElement.querySelector(".testimonial-position").textContent = testimonialData.position;
+        testimonialElement.querySelector(".testimonial-img").src = testimonialData.image;
+        testimonialElement.querySelector(".testimonial-img").alt = testimonialData.name;
+        const rating = testimonialData.rating || 5;
+        const fullStars = "★".repeat(rating);
+        const emptyStars = "☆".repeat(5 - rating);
+        testimonialElement.querySelector(".testimonial-rating").textContent = fullStars + emptyStars;
+
+
+    });
 }
+
+

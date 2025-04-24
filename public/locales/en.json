@@ -107,5 +107,13 @@
     "message": "Message",
     "messagePlaceholder": "Leave us a message",
     "submit": "Start today"
+  },
+  "footer": {
+    "aboutProduct": "About The Product",
+    "benefits": "Benefits",
+    "testimonials": "Testimonials",
+    "pricing": "Plans",
+    "contact": "Contact",
+    "copyright": "©demy 2025. All rights reserved"
   }
 }

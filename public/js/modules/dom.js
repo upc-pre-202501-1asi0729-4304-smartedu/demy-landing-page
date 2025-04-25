@@ -107,4 +107,21 @@ export function updateTexts(data) {
     document.getElementById("footer-pricing").textContent = data.footer.pricing;
     document.getElementById("footer-contact").textContent = data.footer.contact;
     document.getElementById("footer-copyright").textContent = data.footer.copyright;
+
+    //FAQ
+    document.getElementById('faq-title').textContent = data.faq.title;
+    document.getElementById('faq-heading').textContent = data.faq.heading;
+
+    document.getElementById('faq-question-one').textContent = data.faq.questions.question_1.title;
+    document.getElementById('faq-answer-one').textContent = data.faq.questions.question_1.answer;
+
+    document.getElementById('faq-question-two').textContent = data.faq.questions.question_2.title;
+    document.getElementById('faq-answer-two').textContent = data.faq.questions.question_2.answer;
+
+    document.getElementById('faq-question-three').textContent = data.faq.questions.question_3.title;
+    document.getElementById('faq-answer-three').textContent = data.faq.questions.question_3.answer;
+
+    document.getElementById('faq-question-four').textContent = data.faq.questions.question_4.title;
+    document.getElementById('faq-answer-four').textContent = data.faq.questions.question_4.answer;
+
 }
